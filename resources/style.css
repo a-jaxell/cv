@@ -1,0 +1,53 @@
+*{
+border: 2px solid red;
+}
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body{
+    font-family: 'Overpass', sans-serif;
+}
+.headshot{
+    border-radius: 50%;
+    grid-area: image;
+}
+.headshot>img{
+    height: 200px;
+    width: 200px;
+}
+
+.banner{
+    display: grid;
+    grid-template: 1fr 3fr repeat(2, 1fr) / repeat(2, 2fr) 1fr 0.5fr;
+    grid-template-areas: "top top top top"
+                         "image mid button side"
+                         "image mid button side"
+                         "bottom bottom bottom bottom"; 
+    background-color: #FFDD90;
+    margin: 50px 25px 20px 25px;
+    max-height: 400px;
+    max-width: 800px;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-area: button;
+    align-items: center;
+}
+nav>div{
+    background-color: #52C6EC;
+    color: black;
+    font-weight: bold;
+}
+nav>.sidebtn:hover{
+    transition: .5s;
+    background-color: #EA63A2;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    max-width: 400px;
+}
